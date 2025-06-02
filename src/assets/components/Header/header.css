@@ -2,7 +2,7 @@
     font-family: Poppins;
     src: url('/src/assets/fonts/Poppins-Regular.ttf');
 }
-#slight{
+.slight{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,9 +12,35 @@
     width: 100%;
     background: transparent;
     font-family: Poppins;
+    color: white;
+    transition: 0.6s ease;
+}
+.changed{
+    background: silver;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 120px;
+    position: fixed;
+    z-index: 15;
+    width: 100%;
+    font-family: Poppins;
+    transition: 0.6s ease;
+}
+.changed a{
+   color: black;
+   
+}
+.changed .logo a{
+    color: black;
+}
+.changed .links a{
+    color: black;
 }
 nav a{
     text-decoration: none;
+    color: black;
 }
 .logo a{
     color: white;
@@ -32,4 +58,5 @@ nav a{
 .links a:hover{
     color: grey;
     transition: 1.5s ease;
+    
 }

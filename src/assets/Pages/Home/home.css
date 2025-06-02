@@ -1,7 +1,7 @@
 @font-face{
     font-family: Poppins;
     src: url('/src/assets/fonts/Poppins-Regular.ttf');
-}
+}b
 html{
     scroll-behavior: smooth;
 }
@@ -15,19 +15,48 @@ html{
     width: 100%;
     display: flex;
 }
+.back{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 5;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back img{
+    height: 20px;
+}
 .intro{
     height: 100vh;
     width: 40%;
-    background-image: url('/src/assets/images/picture\(4\).jpg');
+    /* background-image: url('/src/assets/images/picture\(4\).jpg'); */
     position: relative;
-    background-color: rgba(0, 0, 0, 0.492);
-    background-blend-mode: darken;
+    /* background-color: rgba(0, 0, 0, 0.492); */
+    background-color: rgba(0, 0, 0, 0.815);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.center-pic img{
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    border: 2px solid white;
+    
 }
 .slide-con{
     height: 100vh;
     width: 60%;
     display: flex;
-    padding: 200px 100px 0px;
+    padding: 200px 70px 0px 100px;
     background-color: rgba(0, 0, 0, 0.815);
     /* background-color: rgba(0, 0, 0, 0.34); */
 }
@@ -60,7 +89,7 @@ html{
 }
 .details p{
     padding-top: 10px;
-    font-size: 18px;
+    font-size: 22px;
 }
 .buttons{
     display: flex;
@@ -81,10 +110,12 @@ html{
     background-color: #dddd;
 }
 .buttons .second{
-    background-color: grey;
+    background-color: inherit;
+    color: white;
+    border: 1px solid white;
 }
 .buttons .second:hover{
-    background-color: #e4e4e4;
+    background-color: #aaa;
 }
 .about{
     padding: 100px 120px 0px;
@@ -218,12 +249,12 @@ html{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding-top: 70px;
-    gap: 40px;
+    gap: 60px;
 }
 .diff{
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 40px;
     border: 2px solid silver;
     border-radius: 10px;
     background-image: 
@@ -245,20 +276,42 @@ html{
 .card{
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 40px;
     border: 2px solid silver;
     border-radius: 10px;
+    position: relative;
+    bottom: 0;
+}
+.card:hover{
+    position: relative;
+    bottom: 20px;
+    transition: 0.5s ease;
 }
 .card img{
     height: 80px;
     width: 80px;
     fill: white;
 }
+.card:hover img{
+    animation: flip 0.3s;
+}
+@keyframes flip{
+    0%{
+        transform: rotateY(0deg);
+    }
+    50%{
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
 .card h3{
     padding-top: 15px;
 }
 .card p{
     padding-top: 20px;
+    line-height: 30px;
 }
 .projects{
     padding: 100px 120px 60px;
@@ -268,15 +321,30 @@ html{
 }
 .project-con{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
     padding-top: 50px;
 }
 .project{
-    padding: 50px;
+    display: flex;
+    gap: 30px;
+    padding: 25px;
     border: 2px solid silver;
     border-radius: 10px;
+    align-items: center;
+}
+.pro-img img{
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+    /* object-fit: contain; */
+}
+.pro-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .contact{
     padding: 100px 120px 100px;

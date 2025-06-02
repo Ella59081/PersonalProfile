@@ -1,10 +1,21 @@
 import './header.css'
-import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
 function Header(){
+    const [back, setBack] = useState(false);
+    const change =  () =>{
+        if(window.scrollY > 2){
+            setBack(true)
+        }else{
+            setBack(false)
+        }
+    }
+    window.addEventListener("scroll", change)
+    window.addEventListener("scroll", ()=>{} );
+
     return(
         <>
-         <nav id="slight">
+         <nav id="slight" className={back ? "changed" : "slight"}>
             <div class="logo"> 
                 <a href="#home">MyFolio</a>
             </div>

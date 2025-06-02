@@ -1,18 +1,45 @@
 import './home.css'
+import { useState } from 'react';
 
 function Home(){
+
+    // const handleClick = () =>{
+    //     if(window.scrollY > 90){
+    //         button.style.display = flex;
+    //     }else if(window.scrollY == 0){
+    //         button.style.display = none;
+    //     }
+    // }
+
+    const handleScroll = () =>{
+       window.scrollY > 100 ? window.scrollTo(window.scrollY -1000) - 100 : ''
+    }
+    const onHover = () =>{
+        const [hover, setHover] = useState(false);
+        
+    }
+    
+
     return(
         <>
         <div className='con'>
            <div class="home" id="home">
+            <a href='#home' onClick={handleScroll} className="back">
+                <img src="/src/assets/images/angle-up-solid.svg" alt="" />
+                 
+            </a>
             <div class="intro">
-                
+                <div class='center-pic'>
+                    <img src="/src/assets/images/profile-pic.jpg" alt="" />
+                </div>
             </div>
             <div className="slide-con">
             <div id="slide" class="details">
                 <h1>Hello!</h1>
                 <h3>I'm Eleanor Ebere</h3>
-                <p>A Front-End Developer with a passion for technology and design.</p>
+                <p>A Front-End Developer with a passion for technology and design.
+                     I'm An aspiring Software developer eager to learn and grow
+                </p>
                 <div class="buttons">
                     <a href="#contact">Contact me</a>
                     <a href="#projects" className="second">See my works</a>
@@ -77,7 +104,7 @@ function Home(){
                     </div>
                 <div class="profile">
                     <div className='frame'></div>
-                    <img className='frame-pic' src="/src/assets/images/picture-block.jpg" alt="" />
+                    <img className='frame-pic' src="/src/assets/images/picture(4).jpg" alt="" />
                 </div>
             </div>
             <div className="skills">
@@ -151,12 +178,46 @@ function Home(){
                     <div></div>
             </div>
             <div className="project-con">
-                <div className="project"></div>
-                <div className="project"></div>
-                <div className="project"></div>
-                <div className="project"></div>
-                <div className="project"></div>
-                <div className="project"></div>
+                <div className="project">
+                    <div className='pro-img'>
+                        <img src="/src/assets/images/nvidia-pic.PNG" alt="" />
+                        
+                    </div>
+                    <div className='pro-info'>
+                        <h2>Nvidia clone</h2>
+                        <p>A clone of the Nvida website showing only the home page.
+                        </p>
+                        <p>HTML, CSS</p>
+                    </div>
+                </div>
+                <div className="project">
+                    <div className='pro-img'>
+                        <img src="/src/assets/images/resume-pic.PNG" alt="" />
+                        
+                    </div>
+                <div className='pro-info'>
+                        <h2>Resume Builder</h2>
+                        <p>A resume builder where users can input their details and
+                           get a job ready portfolio.
+                        </p>
+                        <p>REACT, CSS</p>
+                    </div>
+                </div>
+                <div className="project">
+                    <div className='pro-img'>
+                        <img src="/src/assets/images/ecommerce-pic.PNG" alt="" />
+                        
+                    </div>
+                    <div class='pro-info'>
+                        <h2>Ecommerce Website</h2>
+                        <p>An Ecommerce website for easy shopping with API consumption
+                           where customers can login see their profile and statistics
+
+                        </p>
+                        <p>REACT, CSS</p>
+                    </div>
+                </div>
+                
             </div>
            </div>
            <div className="contact" id='contact'>
