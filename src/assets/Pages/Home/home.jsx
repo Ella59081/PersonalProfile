@@ -1,44 +1,98 @@
 import './home.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { User2 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { BookText } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import {MapPin} from 'lucide-react';
+import { Flag } from 'lucide-react';
+import introPic from '../../../assets/images/pic-1.jpg'
+import profilePicture from '../../../assets/images/picture(4).jpg'
+import arrowUp from "../../../assets/images/angle-up-solid.svg"
 
 function Home(){
 
-    // const handleClick = () =>{
-    //     if(window.scrollY > 90){
-    //         button.style.display = flex;
-    //     }else if(window.scrollY == 0){
-    //         button.style.display = none;
-    //     }
-    // }
+    const skills = [
+        {
+            skill: "HTML",
+            image: "" 
+        },
+        {
+            skill: "CSS",
+            image: ""
+        },
+        {
+            skill: "JAVASCRIPT",
+            image: ""
+        },
+        {
+            skill: "REACT",
+            image: ""
+        },
+        {
+            skill: "TAILWIND",
+            image: ""
+        },
+        {
+            skill: "SQL SERVER",
+            image: ""
+        },
+        {
+            skill: "MONGO DB",
+            image: ""
+        }
+    ]
 
-    const handleScroll = () =>{
-       window.scrollY > 100 ? window.scrollTo(window.scrollY -1000) - 100 : ''
-    }
-    const onHover = () =>{
-        const [hover, setHover] = useState(false);
+    const [pastHome, setPastHome] = useState(false)
+    useEffect(() => {
+        const handleScrolling = () =>{
+            if(window.scrollY > 500){
+                setPastHome(true)
+            }else{
+                setPastHome(false)
+            }
         
-    }
+        }
+        window.addEventListener("scroll", handleScrolling);
+        handleScrolling();
+        return () => 
+        window.removeEventListener("scroll", handleScrolling);
+      }, [])
     
+    const scrollToTop = () =>{
+       window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+       }
+       )
+
+       document.documentElememt.scrollTop = 0;
+    }
 
     return(
         <>
         <div className='con'>
            <div class="home" id="home">
-            <a href='#home' onClick={handleScroll} className="back">
-                <img src="/src/assets/images/angle-up-solid.svg" alt="" />
-                 
-            </a>
+            { pastHome &&
+            <button onClick={scrollToTop} className="back">
+               <img src={arrowUp} alt="" />
+            </button>
+            }
             <div class="intro">
                 <div class='center-pic'>
-                    <img src="/src/assets/images/profile-pic.jpg" alt="" />
+                    <img src={introPic} alt="" />
                 </div>
             </div>
             <div className="slide-con">
             <div id="slide" class="details">
-                <h1>Hello!</h1>
+                <div className='greet'>
+                    <h1>Hello!</h1>
+                    <h1 className='wave'>👋</h1>
+                </div>
                 <h3>I'm Eleanor Ebere</h3>
                 <p>A Front-End Developer with a passion for technology and design.
-                     I'm An aspiring Software developer eager to learn and grow
+                    Eager to learn, grow and collaborate.
+                    
                 </p>
                 <div class="buttons">
                     <a href="#contact">Contact me</a>
@@ -56,46 +110,46 @@ function Home(){
             <div class="info-block">
                     <div class="info">
                         <p> Hi, My name is Eleanor Ebere, I'm a Front-End Developer currently schooling in Aptech-ph, Rivers State, Nigeria,
-                            with the skills necessary for a Front-End Developer.
+                            building dynamic, responsive, user-friendly interfaces and websites using frontend technologies
+                            such as HTML, CSS , JavaScript and React and Effiently consuming Restful APIS.
                             I am eager to expand my skills and grow as a developer.
-                            Please feel free to contact me if you need my services.
-
+                            I also have wide knowledge of database management and data manipulation.
                         </p>
-                        <p class="hobby">I enjoy playing intersting, problem solving games, cooking, singing and listening 
+                        <p class="hobby">In my free time I enjoy playing problem solving games and listening 
                             to music.
                         </p>
                         <div className="addition">
                             <div className="add">
                                 <div>
-                                    <img src="/src/assets/images/user-solid (1).svg" alt="" />
-                                    <p>Birth-Date:</p>
+                                    <User2 color='black'/>
+                                    <p>Birth-Date :</p>
                                     <p>6th August 2008</p>
                                 </div>
                                 <div>
-                                    <img src="/src/assets/images/book-solid.svg" alt="" />
-                                    <p>School:</p>
+                                    <BookText color='black'/>
+                                    <p>School :</p>
                                     <p>Aptech-ph</p>
                                 </div>
                                 <div>
-                                    <img src="/src/assets/images/flag-solid.svg" alt="" />
-                                    <p>Nationality:</p>
+                                    <Flag color='black'/>
+                                    <p>Nationality :</p>
                                     <p>Nigerian</p>
                                 </div>
                             </div>
                             <div className="add">
                                 <div>
-                                    <img src="/src/assets/images/envelope-solid.svg" alt="" />
-                                    <p>Email:</p>
+                                    <Mail color='black'/>
+                                    <p>Email :</p>
                                     <p>ele123nor@gmail.com</p>
                                 </div>
                                 <div>
-                                    <img src="/src/assets/images/phone-solid.svg" alt="" />
-                                    <p>Phone:</p>
+                                    <Phone color='black' />
+                                    <p>Phone :</p>
                                     <p>09097194405</p>
                                 </div>
                                 <div>
-                                    <img src="/src/assets/images/location-dot-solid.svg" alt="" />
-                                    <p>Location:</p>
+                                    <MapPin color='black'/>
+                                    <p>Location :</p>
                                     <p>Rivers State, Nigeria</p>
                                 </div>
                             </div>
@@ -104,9 +158,13 @@ function Home(){
                     </div>
                 <div class="profile">
                     <div className='frame'></div>
-                    <img className='frame-pic' src="/src/assets/images/picture(4).jpg" alt="" />
+                    <img className='frame-pic' src={profilePicture} alt="" />
                 </div>
             </div>
+            <div class="buttons middle">
+                <a href="#contact">Contact me</a>
+                <a href="#projects" className="second">Download My CV</a>
+                </div> 
             <div className="skills">
                 <div class="header">
                     <div></div>
@@ -114,8 +172,8 @@ function Home(){
                     <div></div>
                 </div>
                 <div className='topic'>
-                    <p>All the skills I have acquired regarding
-                            Front-End Development   :
+                    <p>Skills I have acquired with regard to frontend development
+                        including languages, libraires and database management :
                     </p>
                     <div className="blocks">
                         <div className="block">
@@ -151,6 +209,7 @@ function Home(){
             <div className='cards'>
                 <div className="diff">
                     <img src="/src/assets/images/services.png" alt="" />
+                    {/* this image rotates 180deg on hover */}
                     <h4>MY SERVICES</h4>
                     <p>I offer the following the services</p>
                 </div>

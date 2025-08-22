@@ -22,11 +22,19 @@ function Header(){
             <div class="links">
                 {/* <Link to="/home.jsx">Home</Link>
                 <Link to="/about.jsx">About</Link> */}
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#home">
+                    Home</a>
+                <a href="#about">
+                    About</a>
+                <a href="#services"
+                >
+                    Services</a>
+                <a href="#projects"
+                >
+                    Projects</a>
+                <a href="#contact"
+                >
+                    Contact</a>
             </div>
         </nav>
         </>
