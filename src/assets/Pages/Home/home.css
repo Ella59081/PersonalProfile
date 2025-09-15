@@ -29,9 +29,6 @@ html{
     align-items: center;
     justify-content: center;
 }
-.back img{
-    height: 20px;
-}
 .intro{
     height: 100vh;
     width: 40%;
@@ -39,7 +36,6 @@ html{
     position: relative;
     /* background-color: rgba(0, 0, 0, 0.492); */
     background-color: rgba(0, 0, 0, 0.815);
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,7 +47,6 @@ html{
     border-radius: 30px;
     border: 2px solid white;
     box-shadow: 15px 20px 15px grey;
-    
 }
 .slide-con{
     height: 100vh;
@@ -64,23 +59,15 @@ html{
 #slide{
     width: 80%;
     transition: 2s ease;
-    animation-name: slide;
     animation-duration: 3s;
     animation-direction: normal;
     color: white;
     
 }
-@keyframes slide{
-    0%{
-        transform: translateX(1000px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
 .details .greet{
     display: flex;
     gap: 20px;
+    animation: bounce 6.5s ease 1;
 }
 .details h1{
     font-size: 30px;
@@ -91,15 +78,38 @@ html{
     padding-top: 10px;
     font-weight: lighter;
     line-height: 90px;
+    animation: bounce 6s ease 1;
 }
 .details p{
     padding-top: 10px;
     font-size: 22px;
+    animation: bounce 5s ease 0.5s 1;
 }
 .buttons{
     display: flex;
     gap: 20px;
     margin-top: 40px;
+    animation: bounce 4.5s ease 1;
+}
+@keyframes bounce{
+    0%{
+        visibility: hidden;
+        transform: translateY(-700px);
+    }
+    25%{
+        visibility: visible;
+        filter: opacity(0.1);
+    }
+    50%{
+        filter: opacity(0.3);
+    }
+    75%{
+        filter: opacity(0.8);
+    }
+    100%{
+        filter: opacity(1);
+        transform: translateY(0);
+    }
 }
 .middle{
     justify-content: center;
@@ -114,6 +124,7 @@ html{
     text-decoration: none;
     color: black;
     background-color: whitesmoke;
+    transition: 1s ease;
 }
 .buttons a:hover{
     background-color: #dddd;
@@ -200,7 +211,7 @@ html{
 .frame{
     width: 78%;
     height: 530px;
-    border-radius: 5px;
+    border-radius: 30px;
     border: 8px solid silver;
 }
 .frame-pic{
@@ -209,7 +220,13 @@ html{
     width: 380px;
     top: 68px;
     right: 100px;
-    border-radius: 5px;
+    border-radius: 30px;
+    filter:  grayscale(100%);
+    transition: 0.6s ease;
+}
+.frame-pic:hover{
+    filter: grayscale(0%);
+    transition: 0.6s ease;
 }
 .skills{
     width: 100%;

@@ -1,5 +1,5 @@
 import './header.css'
-import { useState } from 'react';
+import { act, useState } from 'react';
 
 function Header(){
     const [back, setBack] = useState(false);
@@ -13,28 +13,32 @@ function Header(){
     window.addEventListener("scroll", change)
     window.addEventListener("scroll", ()=>{} );
 
+    const links = [
+            "Home",
+            "About",
+            "Services",
+            "Projects",
+            "Contact"
+    ]
+    
+    const [active, setActive] = useState("Home");
+
     return(
         <>
-         <nav id="slight" className={back ? "changed" : "slight"}>
-            <div class="logo"> 
+        <nav id="slight" className={back ? "changed" : "slight"}>
+            <div className="logo"> 
                 <a href="#home">MyFolio</a>
             </div>
-            <div class="links">
-                {/* <Link to="/home.jsx">Home</Link>
-                <Link to="/about.jsx">About</Link> */}
-                <a href="#home">
-                    Home</a>
-                <a href="#about">
-                    About</a>
-                <a href="#services"
-                >
-                    Services</a>
-                <a href="#projects"
-                >
-                    Projects</a>
-                <a href="#contact"
-                >
-                    Contact</a>
+            <div className="links">
+                {
+                    links.map((link, index) =>(
+                        <a key={index} style={{color:  `${active == link ? 'grey': 'white'}`}}
+                        onClick={() => setActive(link)}
+                         href={'#'+ link}>
+                            {link}
+                        </a>
+                    ))
+                }
             </div>
         </nav>
         </>

@@ -1,14 +1,13 @@
 import './home.css'
 import { useState, useEffect } from 'react';
-import { User2 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { BookText } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import {MapPin} from 'lucide-react';
-import { Flag } from 'lucide-react';
-import introPic from '../../../assets/images/pic-1.jpg'
+import { 
+    User2, Mail, 
+    BookText, Phone, 
+    MapPin, Flag, ChevronUp 
+} from 'lucide-react';
+import introPic from '../../../assets/images/pic-12.jpg'
 import profilePicture from '../../../assets/images/picture(4).jpg'
-import arrowUp from "../../../assets/images/angle-up-solid.svg"
+
 
 function Home(){
 
@@ -72,10 +71,10 @@ function Home(){
     return(
         <>
         <div className='con'>
-           <div class="home" id="home">
+           <div class="home" id="Home">
             { pastHome &&
             <button onClick={scrollToTop} className="back">
-               <img src={arrowUp} alt="" />
+                <ChevronUp/>
             </button>
             }
             <div class="intro">
@@ -89,8 +88,8 @@ function Home(){
                     <h1>Hello!</h1>
                     <h1 className='wave'>👋</h1>
                 </div>
-                <h3>I'm Eleanor Ebere</h3>
-                <p>A Front-End Developer with a passion for technology and design.
+                <h3 className='name'>I'm Eleanor Ebere</h3>
+                <p className='des'>A Front-End Developer with a passion for technology and design.
                     Eager to learn, grow and collaborate.
                     
                 </p>
@@ -101,7 +100,7 @@ function Home(){
             </div>
             </div>
            </div>
-           <div className="about" id="about">
+           <div className="about" id="About">
             <div class="header">
                     <div></div>
                     <h1>About Me</h1>
@@ -111,7 +110,7 @@ function Home(){
                     <div class="info">
                         <p> Hi, My name is Eleanor Ebere, I'm a Front-End Developer currently schooling in Aptech-ph, Rivers State, Nigeria,
                             building dynamic, responsive, user-friendly interfaces and websites using frontend technologies
-                            such as HTML, CSS , JavaScript and React and Effiently consuming Restful APIS.
+                            such as HTML, CSS , JavaScript and React and effiently consuming Restful APIS.
                             I am eager to expand my skills and grow as a developer.
                             I also have wide knowledge of database management and data manipulation.
                         </p>
@@ -158,7 +157,7 @@ function Home(){
                     </div>
                 <div class="profile">
                     <div className='frame'></div>
-                    <img className='frame-pic' src={profilePicture} alt="" />
+                    <img className='frame-pic' src="/src/assets/images/pic-8.jpg" alt="" />
                 </div>
             </div>
             <div class="buttons middle">
@@ -200,7 +199,7 @@ function Home(){
                 </div>
             </div>
            </div>
-           <div className="services" id='services'>
+           <div className="services" id='Services'>
             <div class="header">
                     <div></div>
                     <h1>My Services</h1>
@@ -230,7 +229,7 @@ function Home(){
                 </div>
             </div>
            </div>
-           <div className="projects" id='projects'>
+           <div className="projects" id='Projects'>
             <div class="header">
                     <div></div>
                     <h1>My Projects</h1>
@@ -279,7 +278,7 @@ function Home(){
                 
             </div>
            </div>
-           <div className="contact" id='contact'>
+           <div className="contact" id='Contact'>
             <div class="header">
                     <div></div>
                     <h1>Contact Me</h1>
