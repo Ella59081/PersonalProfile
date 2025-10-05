@@ -7,38 +7,53 @@ import {
 } from 'lucide-react';
 import introPic from '../../../assets/images/pic-12.jpg'
 import profilePicture from '../../../assets/images/picture(4).jpg'
-
+import htmlLogo from '../../../assets/images/logo-html.png'
+import cssLogo from '../../../assets/images/logo-css.png'
+import jslLogo from '../../../assets/images/javascript-logo.svg'
+import reactlLogo from '../../../assets/images/logo-react.png'
+import twLogo from '../../../assets/images/tailwind-logo.svg'
+import sqlLogo from '../../../assets/images/sql-logo.svg'
+import mdbLogo from '../../../assets/images/mongodb-logo.svg'
+import { GiSmartphone } from 'react-icons/gi';
+import { FcSmartphoneTablet } from 'react-icons/fc';
+import { Laptop } from 'lucide-react';
+import { BsTools } from 'react-icons/bs';
+import { Database } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { VscSymbolInterface } from 'react-icons/vsc' ;
+import th from '../../../assets/images/tools-hammer-svgrepo-com.svg';
+import services from '../../components/services';
 
 function Home(){
 
     const skills = [
         {
             skill: "HTML",
-            image: "" 
+            image: htmlLogo 
         },
         {
             skill: "CSS",
-            image: ""
+            image: cssLogo
         },
         {
-            skill: "JAVASCRIPT",
-            image: ""
+            skill: "JavaScript",
+            image: jslLogo
         },
         {
-            skill: "REACT",
-            image: ""
+            skill: "React JS",
+            image: reactlLogo
         },
         {
-            skill: "TAILWIND",
-            image: ""
+            skill: "Tailwind",
+            image: twLogo
         },
         {
-            skill: "SQL SERVER",
-            image: ""
+            skill: "SQL Server",
+            image: sqlLogo
         },
         {
-            skill: "MONGO DB",
-            image: ""
+            skill: "Mongo DB",
+            image: mdbLogo
         }
     ]
 
@@ -74,7 +89,7 @@ function Home(){
            <div class="home" id="Home">
             { pastHome &&
             <button onClick={scrollToTop} className="back">
-                <ChevronUp/>
+                <ChevronUp size={28}/>
             </button>
             }
             <div class="intro">
@@ -120,34 +135,34 @@ function Home(){
                         <div className="addition">
                             <div className="add">
                                 <div>
-                                    <User2 color='black'/>
+                                    <User2 color='grey'/>
                                     <p>Birth-Date :</p>
                                     <p>6th August 2008</p>
                                 </div>
                                 <div>
-                                    <BookText color='black'/>
+                                    <BookText color='grey'/>
                                     <p>School :</p>
                                     <p>Aptech-ph</p>
                                 </div>
                                 <div>
-                                    <Flag color='black'/>
+                                    <Flag color='grey'/>
                                     <p>Nationality :</p>
                                     <p>Nigerian</p>
                                 </div>
                             </div>
                             <div className="add">
                                 <div>
-                                    <Mail color='black'/>
+                                    <Mail color='grey'/>
                                     <p>Email :</p>
                                     <p>ele123nor@gmail.com</p>
                                 </div>
                                 <div>
-                                    <Phone color='black' />
+                                    <Phone color='grey' />
                                     <p>Phone :</p>
                                     <p>09097194405</p>
                                 </div>
                                 <div>
-                                    <MapPin color='black'/>
+                                    <MapPin color='grey'/>
                                     <p>Location :</p>
                                     <p>Rivers State, Nigeria</p>
                                 </div>
@@ -171,30 +186,18 @@ function Home(){
                     <div></div>
                 </div>
                 <div className='topic'>
-                    <p>Skills I have acquired with regard to frontend development
+                    <p>Skills I use with regard to frontend development
                         including languages, libraires and database management :
                     </p>
                     <div className="blocks">
-                        <div className="block">
-                            <img src="/src/assets/images/logo-html.png" alt="" /> 
-                            {/* this image rotates 180deg on hover */}
-                            <h2>HTML</h2>
-                        </div>
-                        <div className="block">
-                        <img src="/src/assets/images/logo-css.png" alt="" /> 
-                            {/* this image rotates 180deg on hover */}
-                            <h2>CSS</h2>
-                        </div>
-                        <div className="block">
-                        <img src="/src/assets/images/logo-js.png" alt="" /> 
-                            {/* this image rotates 180deg on hover */}
-                            <h2>JAVASCRIPT</h2>
-                        </div>
-                        <div className="block">
-                        <img src="/src/assets/images/logo-react.png" alt="" /> 
-                            {/* this image rotates 180deg on hover */}
-                            <h2>REACT</h2>
-                        </div>
+                        {
+                            skills.map((skill, index) =>(
+                                <div key={index} className="block">
+                                    <img src={skill.image} alt="" />
+                                    <h2>{skill.skill}</h2>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>
@@ -208,25 +211,21 @@ function Home(){
             <div className='cards'>
                 <div className="diff">
                     <img src="/src/assets/images/services.png" alt="" />
-                    {/* this image rotates 180deg on hover */}
+                    
                     <h4>MY SERVICES</h4>
-                    <p>I offer the following the services</p>
+                    <p>I focus on building modern and dynamic designs
+                        tailored to your specific needs.
+                    </p>
                 </div>
-                <div className="card">
-                    <img src="/src/assets/images/devices.png" alt="" />
-                    <h3>Responsive Design</h3>
-                    <p>Responsive and flexible design across all devices and browsers</p>
-                </div>
-                <div className="card">
-                    <img src="/src/assets/images/2interfaces.png" alt="" />
-                    <h3>Beautiful Interfaces</h3>
-                    <p>Interactive and dynamic user interfaces for websites</p>
-                </div>
-                <div className="card">
-                    <img src="/src/assets/images/frame.png" alt="" />
-                    <h3>Use of proper tools </h3>
-                    <p>Using javascript and frame works to create user friendly interfaces</p>
-                </div>
+                {
+                    services.map((service, index) =>(
+                        <div className="card" key={index}>
+                            <img src={service.img} alt="" />
+                            <h3>{service.service_name}</h3>
+                            <p>{service.description}</p>
+                        </div>
+                    ))
+                }
             </div>
            </div>
            <div className="projects" id='Projects'>

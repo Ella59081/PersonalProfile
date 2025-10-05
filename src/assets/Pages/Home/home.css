@@ -16,8 +16,7 @@ html{
     display: flex;
 }
 .back{
-    height: 30px;
-    width: 30px;
+    padding: 8px;
     background-color: white;
     border: none;
     border-radius: 100%;
@@ -28,6 +27,11 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.8s ease;
+}
+.back:hover{
+    scale: 1.15;
+    transition: 0.8s ease;
 }
 .intro{
     height: 100vh;
@@ -79,6 +83,8 @@ html{
     font-weight: lighter;
     line-height: 90px;
     animation: bounce 6s ease 1;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
 }
 .details p{
     padding-top: 10px;
@@ -151,7 +157,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 8px;
 }
 .header div{
     background-color: grey;
@@ -170,7 +176,7 @@ html{
     position: relative;
 }
 .info{
-    width: 50%;
+    width: 55%;
 }
 .info p{
     font-size: 17px;
@@ -178,10 +184,12 @@ html{
     
 }
 .addition{
-    padding-top: 50px;
+    margin-top: 50px;
     display: flex;
-    /* flex-direction: column; */
+    padding: 25px;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.341);
+    border-radius: 10px;
 }
 .add{
     display: flex;
@@ -209,18 +217,19 @@ html{
     position: relative;
 }
 .frame{
-    width: 78%;
-    height: 530px;
-    border-radius: 30px;
-    border: 8px solid silver;
+    width: 76%;
+    height: 490px;
+    border-radius: 5px;
+    border: 10px solid silver;
+    position: relative;
 }
 .frame-pic{
     position: absolute;
     height: 400px;
     width: 380px;
-    top: 68px;
-    right: 100px;
-    border-radius: 30px;
+    top: 45px;
+    right: 55px;
+    border-radius: 5px;
     filter:  grayscale(100%);
     transition: 0.6s ease;
 }
@@ -249,26 +258,48 @@ html{
     gap: 40px;
 }
 .blocks .block{
-    border: 2px solid white;
-    padding: 20px 40px;
+    padding: 40px;
     border-radius: 10px;
     display: flex;
     gap: 20px;
     align-items: center;
     bottom: 0;
+    transition: 0.6s ease;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.482);
+    box-shadow: 10px 10px 10px black
 }
 .block img{
-    height: 100px;
+    height: 80px;
 }
 .block h2{
-    font-size: 40px;
+    font-size: 35px;
 }
 .block:hover{
     position: relative;
     bottom: 5px;
-    box-shadow: 5px 10px 5px rgba(192, 192, 192, 0.214);
-    transition: 0.3s ease;
-}.services{
+    transition: 0.6s ease;
+    box-shadow: none;
+}
+.block::before{
+    content: '';
+    height: calc(100% + 20px);
+    width: 108%;
+    position: absolute;
+    top: -20;
+    right: -15px;
+    z-index: -1;
+    filter: blur(15px);
+    border-radius: 10px;
+    transition: 0.5s ease;
+    background-image: linear-gradient(to right, navy, teal);
+    visibility: hidden;
+}
+.block:hover::before{
+    visibility: visible;
+    transition: 0.5s ease;
+}
+.services{
     padding: 100px 120px 60px;
     width: 100%;
     color: white;
@@ -276,15 +307,15 @@ html{
 }
 .cards{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding-top: 70px;
-    gap: 60px;
+    gap: 40px;
 }
 .diff{
     display: flex;
     flex-direction: column;
     padding: 40px;
-    border: 2px solid silver;
+    border: 1px solid silver;
     border-radius: 10px;
     background-image: 
     linear-gradient(to bottom, rgba(192, 192, 192, 0.622),
@@ -293,33 +324,37 @@ html{
 .diff h4{
     letter-spacing: 6px;
     padding-top: 25px;
+    font-size: 17px;
 }
 .diff p{
-    padding-top: 20px;
+    padding-top: 15px;
+    line-height: 30px;
 }
 .diff img{
     height: 80px;
     width: 80px;
-    fill: white;
 }
 .card{
     display: flex;
     flex-direction: column;
-    padding: 40px;
-    border: 2px solid silver;
+    padding: 50px 40px;
+    border: 1px solid rgba(137, 137, 137, 0.299);
     border-radius: 10px;
     position: relative;
     bottom: 0;
+    transition: 0.6s ease;
 }
 .card:hover{
     position: relative;
     bottom: 20px;
-    transition: 0.5s ease;
+    transition: 0.6s ease;
+    border: 2px solid silver;
 }
 .card img{
     height: 80px;
     width: 80px;
     fill: white;
+    animation: none;
 }
 .card:hover img{
     animation: flip 0.3s;
@@ -336,11 +371,14 @@ html{
     }
 }
 .card h3{
-    padding-top: 15px;
+    padding-top: 25px;
+    font-size: 20.5px;
 }
 .card p{
-    padding-top: 20px;
+    padding-top: 15px;
     line-height: 30px;
+    font-size: 16px;
+    color: #aaa;
 }
 .projects{
     padding: 100px 120px 60px;
