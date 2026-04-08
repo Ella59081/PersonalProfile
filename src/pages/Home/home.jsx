@@ -1,3 +1,4 @@
+import '../../pages/Home/responsiveness.css'
 import './home.css'
 import { useState, useEffect } from 'react';
 import { 
@@ -5,26 +6,37 @@ import {
     BookText, Phone, 
     MapPin, Flag, ChevronUp 
 } from 'lucide-react';
-import introPic from '../../../assets/images/pic-12.jpg'
-import profilePicture from '../../../assets/images/picture(4).jpg'
-import htmlLogo from '../../../assets/images/logo-html.png'
-import cssLogo from '../../../assets/images/logo-css.png'
-import jslLogo from '../../../assets/images/javascript-logo.svg'
-import reactlLogo from '../../../assets/images/logo-react.png'
-import twLogo from '../../../assets/images/tailwind-logo.svg'
-import sqlLogo from '../../../assets/images/sql-logo.svg'
-import mdbLogo from '../../../assets/images/mongodb-logo.svg'
-import { GiSmartphone } from 'react-icons/gi';
-import { FcSmartphoneTablet } from 'react-icons/fc';
-import { Laptop } from 'lucide-react';
-import { BsTools } from 'react-icons/bs';
-import { Database } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { VscSymbolInterface } from 'react-icons/vsc' ;
-import th from '../../../assets/images/tools-hammer-svgrepo-com.svg';
+
+import introPic from '../../assets/images/pic-10.jpg'
+import htmlLogo from '../../assets/images/logo-html.png'
+import cssLogo from '../../assets/images/logo-css.png'
+import jslLogo from '../../assets/images/javascript-logo.svg'
+import reactlLogo from '../../assets/images/logo-react.png'
+import twLogo from '../../assets/images/tailwind-logo.svg'
+import sqlLogo from '../../assets/images/sql-logo.svg'
+import mdbLogo from '../../assets/images/mongodb-logo.svg'
 import services from '../../components/services';
+import projects from '../../components/projects';
+import languages from '../../components/languages';
+import { BsGithub } from 'react-icons/bs';
+import { Link } from 'lucide-react';
+import { BsInstagram } from 'react-icons/bs';
+import { BsLinkedin } from 'react-icons/bs';
+import { BsYoutube } from 'react-icons/bs';
+import resume from '../../assets/docs/Resume.pdf'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home(){
+
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true, 
+        });
+        AOS.refresh(); 
+    }, []);
 
     const skills = [
         {
@@ -56,6 +68,8 @@ function Home(){
             image: mdbLogo
         }
     ]
+
+    console.log(languages);
 
     const [pastHome, setPastHome] = useState(false)
     useEffect(() => {
@@ -92,16 +106,13 @@ function Home(){
                 <ChevronUp size={28}/>
             </button>
             }
-            <div class="intro">
-                <div class='center-pic'>
-                    <img src={introPic} alt="" />
-                </div>
+            <div class='center-pic'>
+                <img src={introPic} alt="" />
             </div>
-            <div className="slide-con">
             <div id="slide" class="details">
                 <div className='greet'>
                     <h1>Hello!</h1>
-                    <h1 className='wave'>👋</h1>
+                    <h1 className='wave'>🖐️</h1>
                 </div>
                 <h3 className='name'>I'm Eleanor Ebere</h3>
                 <p className='des'>A Front-End Developer with a passion for technology and design.
@@ -109,32 +120,29 @@ function Home(){
                     
                 </p>
                 <div class="buttons">
-                    <a href="#contact">Contact me</a>
-                    <a href="#projects" className="second">See my works</a>
+                    <a href="#Contact">Contact me</a>
+                    <a href="#Projects" className="second">See my works</a>
                 </div>  
-            </div>
             </div>
            </div>
            <div className="about" id="About">
-            <div class="header">
+            <div data-aos="fade-up" class="header">
                     <div></div>
                     <h1>About Me</h1>
                     <div></div>
             </div>
             <div class="info-block">
-                    <div class="info">
+                    <div data-aos="fade-up" class="info">
                         <p> Hi, My name is Eleanor Ebere, I'm a Front-End Developer currently schooling in Aptech-ph, Rivers State, Nigeria,
                             building dynamic, responsive, user-friendly interfaces and websites using frontend technologies
                             such as HTML, CSS , JavaScript and React and effiently consuming Restful APIS.
                             I am eager to expand my skills and grow as a developer.
                             I also have wide knowledge of database management and data manipulation.
-                        </p>
-                        <p class="hobby">In my free time I enjoy playing problem solving games and listening 
+                            In my free time I enjoy playing problem solving games and listening 
                             to music.
                         </p>
-                        <div className="addition">
-                            <div className="add">
-                                <div>
+                        <div data-aos="fade-up" className="addition">
+                            <div>
                                     <User2 color='grey'/>
                                     <p>Birth-Date :</p>
                                     <p>6th August 2008</p>
@@ -149,8 +157,6 @@ function Home(){
                                     <p>Nationality :</p>
                                     <p>Nigerian</p>
                                 </div>
-                            </div>
-                            <div className="add">
                                 <div>
                                     <Mail color='grey'/>
                                     <p>Email :</p>
@@ -166,33 +172,25 @@ function Home(){
                                     <p>Location :</p>
                                     <p>Rivers State, Nigeria</p>
                                 </div>
-                            </div>
                         </div>
                         
                     </div>
-                <div class="profile">
-                    <div className='frame'></div>
-                    <img className='frame-pic' src="/src/assets/images/pic-8.jpg" alt="" />
-                </div>
             </div>
-            <div class="buttons middle">
-                <a href="#contact">Contact me</a>
-                <a href="#projects" className="second">Download My CV</a>
+            <div data-aos="fade-up" class="buttons middle">
+                <a href="#Contact">Contact me</a>
+                <a href={resume} target='blank' className="second">Download My CV</a>
                 </div> 
             <div className="skills">
-                <div class="header">
+                <div data-aos="fade-up" class="header">
                     <div></div>
                     <h1>My Skills</h1>
                     <div></div>
                 </div>
                 <div className='topic'>
-                    <p>Skills I use with regard to frontend development
-                        including languages, libraires and database management :
-                    </p>
                     <div className="blocks">
                         {
                             skills.map((skill, index) =>(
-                                <div key={index} className="block">
+                                <div data-aos="fade-up" key={index} className="block">
                                     <img src={skill.image} alt="" />
                                     <h2>{skill.skill}</h2>
                                 </div>
@@ -203,13 +201,13 @@ function Home(){
             </div>
            </div>
            <div className="services" id='Services'>
-            <div class="header">
+            <div data-aos="fade-up" class="header">
                     <div></div>
                     <h1>My Services</h1>
                     <div></div>
             </div>
             <div className='cards'>
-                <div className="diff">
+                <div data-aos="fade-up" className="diff">
                     <img src="/src/assets/images/services.png" alt="" />
                     
                     <h4>MY SERVICES</h4>
@@ -219,7 +217,7 @@ function Home(){
                 </div>
                 {
                     services.map((service, index) =>(
-                        <div className="card" key={index}>
+                        <div data-aos="fade-up" className="card" key={index}>
                             <img src={service.img} alt="" />
                             <h3>{service.service_name}</h3>
                             <p>{service.description}</p>
@@ -229,56 +227,41 @@ function Home(){
             </div>
            </div>
            <div className="projects" id='Projects'>
-            <div class="header">
+            <div data-aos="fade-up" class="header">
                     <div></div>
                     <h1>My Projects</h1>
                     <div></div>
             </div>
             <div className="project-con">
-                <div className="project">
-                    <div className='pro-img'>
-                        <img src="/src/assets/images/nvidia-pic.PNG" alt="" />
-                        
-                    </div>
-                    <div className='pro-info'>
-                        <h2>Nvidia clone</h2>
-                        <p>A clone of the Nvida website showing only the home page.
-                        </p>
-                        <p>HTML, CSS</p>
-                    </div>
-                </div>
-                <div className="project">
-                    <div className='pro-img'>
-                        <img src="/src/assets/images/resume-pic.PNG" alt="" />
-                        
-                    </div>
-                <div className='pro-info'>
-                        <h2>Resume Builder</h2>
-                        <p>A resume builder where users can input their details and
-                           get a job ready portfolio.
-                        </p>
-                        <p>REACT, CSS</p>
-                    </div>
-                </div>
-                <div className="project">
-                    <div className='pro-img'>
-                        <img src="/src/assets/images/ecommerce-pic.PNG" alt="" />
-                        
-                    </div>
-                    <div class='pro-info'>
-                        <h2>Ecommerce Website</h2>
-                        <p>An Ecommerce website for easy shopping with API consumption
-                           where customers can login see their profile and statistics
-
-                        </p>
-                        <p>REACT, CSS</p>
-                    </div>
-                </div>
+                {
+                    projects.map((project, index) =>(
+                        <div data-aos="fade-up" className='projectDiv' key={index}>
+                            <div style={{backgroundImage: `url(${project.img})`}} className="imageHolder"></div>
+                            <h3 className='projectName' >{project.name}</h3>
+                            <p className='projectDesc'>{project.description}</p>
+                            <div className="languages">
+                                {project.languages.map((language, index) =>(
+                                    <div className='language' key={index} style={{border : `1px solid ${languages[language]}`, color: languages[language] }}>
+                                        {language} 
+                                    </div>
+                                ))}
+                            </div>
+                            <div className='viewLinks'>
+                                <a className='gitLink' href={project.githubLink} target='blank'><BsGithub fill='white' size={24}/></a>
+                                <a className='website' href={project.demoLink} target='blank'><Link size={24}/></a>
+                            </div>
+                            {/* <div className='viewLinks'>
+                                <Link to={project.githubLink}>Github repo </Link>
+                                <Link to={project.demoLink}>View Demo</Link>
+                            </div> */}
+                        </div>
+                    ))
+                }
                 
             </div>
            </div>
            <div className="contact" id='Contact'>
-            <div class="header">
+            <div data-aos="fade-up" class="header">
                     <div></div>
                     <h1>Contact Me</h1>
                     <div></div>
@@ -304,36 +287,35 @@ function Home(){
                     social media platforms.</p>
                     <div className="socials">
                         <a target="blank" href="https://www.instagram.com/chanchilla08?igsh" className='instagram'>
-                            <img src="/src/assets/images/logo-instagram.jpeg" alt="" />
+                            <BsInstagram className='icon instaIcon'/>
                         </a>
-                        <a target="blank" href="https://www.linkedin.com/in/eleanor-ebere-829719358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className='linkedin'>
-                            <img src="/src/assets/images/logo-linked.png" alt="" />
+                        <a target="blank" href="https://www.linkedin.com/in/eleanor-ebere-829719358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className='linkedIn'>
+                            <BsLinkedin className='icon linkedIcon'/>
                         </a>
                         <a target="blank" href="https://youtube.com/@kookella?si=NVKsog4gtDbsEsjk" className='youtube'>
-                            <img src="/src/assets/images/logo-youtube.png" alt="" />
+                            <BsYoutube className='icon youtubeIcon'/>
                         </a>
-                        <a target="blank" href="https://www.github.com/Ella59081" className='whatsapp'>
-                            <img src="/src/assets/images/logo-github.webp" alt="" />
-                            
+                        <a target="blank" href="https://www.github.com/Ella59081" className='github'>
+                            <BsGithub className='icon githubIcon'/>
                         </a>
                     </div>
                     <div className="lists">
                         <h2>Contact Info</h2>
                         <div className="add">
                             <div>
-                                <img src="/src/assets/images/envelope-solid.svg" alt="" />
+                                <Mail color='silver'/>
                                 <p>Email :</p>
                                 <a href="mailto:ele123nor@gmail.com">ele123nor@gmail</a>
                             </div>
                             <div>
-                                <img src="/src/assets/images/phone-solid.svg" alt="" />
+                                <Phone color='silver' />
                                 <p>Phone :</p>
                                 <p>09097194405</p>
                             </div>
                             <div>
-                                    <img src="/src/assets/images/location-dot-solid.svg" alt="" />
-                                    <p>Location :</p>
-                                    <p>03 Joseph Chinwo street, Rumewhara</p>
+                                <MapPin color='silver'/>
+                                <p>Location :</p>
+                                <p>03 Joseph Chinwo street, Port Harcourt</p>
                             </div>
                         </div>
                     </div>
@@ -341,7 +323,8 @@ function Home(){
             </div>
            </div>
            <div className="footer" id='footer'>
-               <p>© 2020. Designed by Eleanor All right reserved.</p>           </div>
+
+               <p>© 2026. All right reserved.</p>           </div>
         </div>
         </>
     )

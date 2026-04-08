@@ -11,9 +11,14 @@ html{
     overflow: hidden;
 }
 .home{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 120px 0px;
+    gap: 120px;
+    background-color: rgba(0, 0, 0, 0.815);
 }
 .back{
     padding: 8px;
@@ -33,45 +38,27 @@ html{
     scale: 1.15;
     transition: 0.8s ease;
 }
-.intro{
-    height: 100vh;
-    width: 40%;
-    /* background-image: url('/src/assets/images/picture\(4\).jpg'); */
-    position: relative;
-    /* background-color: rgba(0, 0, 0, 0.492); */
-    background-color: rgba(0, 0, 0, 0.815);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
 .center-pic img{
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     border-radius: 30px;
+    /* border-radius: 100%; */
     border: 2px solid white;
     box-shadow: 15px 20px 15px grey;
 }
-.slide-con{
-    height: 100vh;
-    width: 60%;
-    display: flex;
-    padding: 200px 70px 0px 100px;
-    background-color: rgba(0, 0, 0, 0.815);
-    /* background-color: rgba(0, 0, 0, 0.34); */
-}
 #slide{
-    width: 80%;
     transition: 2s ease;
     animation-duration: 3s;
     animation-direction: normal;
     color: white;
+    padding-right: 100px;
     
 }
 .details .greet{
     display: flex;
-    gap: 20px;
+    gap: 5px;
     animation: bounce 6.5s ease 1;
+    align-items: center;
 }
 .details h1{
     font-size: 30px;
@@ -176,7 +163,7 @@ html{
     position: relative;
 }
 .info{
-    width: 55%;
+    width: 100%;
 }
 .info p{
     font-size: 17px;
@@ -185,58 +172,35 @@ html{
 }
 .addition{
     margin-top: 50px;
-    display: flex;
-    padding: 25px;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.341);
+    padding: 40px;
+    /* background-color: rgba(0, 0, 0, 0.211); */
+    border: 1px solid grey;
     border-radius: 10px;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
 }
 .add{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.add p{
-    font-size: 17px;
-}
 .add div{
     display: flex;
-    gap: 10px;
-    align-items: center;
 }
-.add div img{
+.addition p{
+    font-size: 17px;
+}
+.addition div{
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+.addition div img{
     height: 24px;
     width: 24px;
 }
-.profile{
-    height: auto;
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    position: relative;
-}
-.frame{
-    width: 76%;
-    height: 490px;
-    border-radius: 5px;
-    border: 10px solid silver;
-    position: relative;
-}
-.frame-pic{
-    position: absolute;
-    height: 400px;
-    width: 380px;
-    top: 45px;
-    right: 55px;
-    border-radius: 5px;
-    filter:  grayscale(100%);
-    transition: 0.6s ease;
-}
-.frame-pic:hover{
-    filter: grayscale(0%);
-    transition: 0.6s ease;
-}
+
 .skills{
     width: 100%;
     color: white;
@@ -256,49 +220,47 @@ html{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    justify-content: center;
+    align-items: center;
 }
 .blocks .block{
     padding: 40px;
     border-radius: 10px;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
-    bottom: 0;
-    transition: 0.6s ease;
     position: relative;
+    bottom: 0px;
+    transition: 1s ease ;
     background-color: rgba(0, 0, 0, 0.482);
-    box-shadow: 10px 10px 10px black
+    box-shadow: 10px 10px 10px black;
 }
 .block img{
     height: 80px;
 }
 .block h2{
-    font-size: 35px;
+    font-size: 30px;
 }
 .block:hover{
-    position: relative;
-    bottom: 5px;
-    transition: 0.6s ease;
-    box-shadow: none;
+    /* box-shadow: none; */
+    transition: all 1s ease;
+    background-image: linear-gradient(to right, black, rgb(68, 67, 67));
 }
 .block::before{
     content: '';
     height: calc(100% + 20px);
     width: 108%;
     position: absolute;
-    top: -20;
     right: -15px;
     z-index: -1;
-    filter: blur(15px);
+    filter: blur(50px);
     border-radius: 10px;
-    transition: 0.5s ease;
-    background-image: linear-gradient(to right, navy, teal);
+    background-image: linear-gradient(to right, black, rgb(68, 67, 67));
     visibility: hidden;
 }
-.block:hover::before{
+/* .block:hover::before{
     visibility: visible;
-    transition: 0.5s ease;
-}
+} */
 .services{
     padding: 100px 120px 60px;
     width: 100%;
@@ -342,7 +304,7 @@ html{
     border-radius: 10px;
     position: relative;
     bottom: 0;
-    transition: 0.6s ease;
+    transition: 0.6s ease bottom;
 }
 .card:hover{
     position: relative;
@@ -387,9 +349,9 @@ html{
     background-color: rgba(0, 0, 0, 0.87);
 }
 .project-con{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* flex-wrap: wrap; */
     justify-content: center;
     gap: 40px;
     padding-top: 50px;
@@ -413,6 +375,93 @@ html{
     flex-direction: column;
     gap: 20px;
 }
+.projectDiv{
+    display: flex;
+    padding: 25px;
+    border: 2px solid silver;
+    border-radius: 10px;
+    flex-direction: column;
+    position: relative;
+}
+.imageHolder{
+    width: 100%;
+    height: 200px;
+    background-size: 136%;
+    border-radius: 10px;
+    transition: 1s ease;
+}
+.imageHolder:hover {
+    background-size: 145%;
+    transition: 1s ease;
+}
+.projectName{
+    padding-top: 20px;
+}
+.projectDesc{
+    padding-top: 8px;
+    color: #aaa;
+}
+.languages{
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+.language{
+    padding: 5px 20px;
+    width: fit-content;
+    border-radius: 20px;
+    font-size: 13px;
+}
+.viewLinks{
+    display: flex;
+    gap: 13px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+.viewLinks a{
+    text-decoration: none;
+    width: 100%;
+    color: white;
+    padding: 6px;
+    border-radius: 100%;
+    border: 1px solid white;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    
+}
+.viewLinks .gitLink{
+    background-color: black;
+}
+.viewLinks .website{
+    background-color: rgb(58, 196, 177);
+}
+/* second design */
+/* .viewLinks{
+    display: flex;
+    gap: 13px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #aaaaaa36;
+}
+
+.viewLinks a{
+    text-decoration: none;
+    width: 100%;
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: fit-content; 
+
+}*/
 .contact{
     padding: 100px 120px 100px;
     width: 100%;
@@ -433,7 +482,7 @@ html{
     display: flex;
     /* justify-content: space-between; */
     padding-top: 50px;
-    gap: 100px;
+    gap: 80px;
 }
 .form{
     display: flex;
@@ -453,7 +502,7 @@ html{
     color: white;
     outline: none;
     border: none;
-    
+    border-radius: 10px;
 }
 .form .message{
     padding: 15px;
@@ -463,6 +512,7 @@ html{
     outline: none;
     border: none;
     height: 180px;
+    border-radius: 10px;
 }
 .form input:focus{
     border: 1px solid silver;
@@ -509,9 +559,38 @@ html{
     align-items: center;
     gap: 20px;
 }
-.socials img{
-    height: 28px;
-    border-radius: 8px;
+.socials a{
+    padding: 10px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0.9;
+    transition: 1.2s ease; */
+}
+/* .socials a:hover{
+    opacity: 1;
+    transition: 1.2s ease;
+} */
+.socials .instagram{
+    background-image: linear-gradient(to bottom right, #405de6, #833ab4, #C13584, #E1306C, #F56040, #FCAF45, #FFDC80);
+}
+.socials .linkedIn{
+    background-color: #0A66C2;
+}
+.socials .youtube{
+    background-color: white;
+}
+.socials .github{
+    background-color: #181717;
+}
+.socials .icon{
+    height: 18px;
+    width: 18px;
+    color: white;
+}
+.socials .youtubeIcon{
+    color: #FF0000;
 }
 .lists{
     display: flex;

@@ -1,8 +1,8 @@
-import responsive from '../../assets/images/responsive-svgrepo-com (1).svg'
-import interfaceImg from '../../assets/images/lesserpad-svgrepo-com.svg'
-import tools from '../../assets/images/tools-hammer-svgrepo-com.svg'
-import dataMg from '../../assets/images/database-01-svgrepo-com.svg'
-import api from '../../assets/images/code-svgrepo-com (2).svg'
+import responsive from '../assets/images/responsive-svgrepo-com (1).svg'
+import interfaceImg from '../assets/images/lesserpad-svgrepo-com.svg'
+import tools from '../assets/images/tools-hammer-svgrepo-com.svg'
+import dataMg from '../assets/images/database-01-svgrepo-com.svg'
+import api from '../assets/images/code-svgrepo-com (2).svg'
 
 const services = [
     {

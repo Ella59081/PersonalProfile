@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './assets/components/Header/header'
-import Home from './assets/Pages/Home/home'
+// import Header from './components/Header/header'
+import Header from './components/Header/header'
+import Home from './pages/Home/home'
 
 
 function App() {

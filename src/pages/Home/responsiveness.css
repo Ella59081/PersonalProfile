@@ -1,0 +1,429 @@
+@media(max-width: 1470px){
+    #slide{
+        padding-right: 0px !important;
+    }
+}
+@media(max-width: 1350px){
+    .home{
+        gap: 100px !important;
+    }
+}
+@media (max-width: 1300px) {
+    .addition{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .blocks{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .cards{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .project-con{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .imageHolder{
+        height: 250px !important;
+    }
+    .form-div{
+        gap: 45px !important;
+    }
+}
+@media(max-width: 1165px){
+    .home{
+        padding: 50px 100px 0px !important;
+    }
+    .about{
+        padding: 100px 100px 0px !important;
+    }
+    #slight{
+        padding: 20px 100px !important;
+    }
+    .services{
+        padding: 100px 100px 60px !important;
+    }
+    .projects{
+        padding: 100px 100px 60px !important;
+    }
+    .contact{
+        padding: 100px 100px 100px !important;
+    }
+}
+@media(max-width: 1100px){
+    .home{
+        padding: 50px 70px 0px !important;
+    }
+    #slight{
+        padding: 20px 70px !important;
+    }
+    .about{
+        padding: 100px 70px 0px !important;
+    }
+    .services{
+        padding: 100px 70px 60px !important;
+    }
+    .projects{
+        padding: 100px 70px 60px !important;
+    }
+    .contact{
+        padding: 100px 70px 100px !important;
+    }
+}
+@media(max-width: 1045px){
+    .center-pic img{
+        height: 350px !important;
+        width: 350px !important;
+    }
+    .details h1{
+        font-size: 25px !important;
+    }
+    .details h3{
+        font-size: 60px !important;
+    }
+    .details p{
+        font-size: 20px !important;
+    }
+    .form-div{
+        flex-direction: column !important;
+        gap: 80px !important;
+    }
+    .form{
+        width: 100% !important;
+    }
+    .send{
+        align-items: center !important;
+    }
+    .lists{
+        width: 100% !important;
+        align-items: center !important;
+    }
+    .add{
+        width: 100%;
+        align-items: center;
+    }
+}
+@media(max-width: 970px){
+    .home{
+        flex-direction: column;
+        padding: 150px 120px 150px !important;
+        height: auto;
+    }
+    .center-pic{
+        order: 2;
+    }
+    .details h1{
+        font-size: 30px !important;
+    }
+    .details h3{
+        font-size: 70px !important;
+    }
+    .details p{
+        font-size: 22px !important;
+    }
+    .center-pic img{
+        height: 400px !important;
+        width: 400px !important;
+        border-radius: 100% !important;
+        box-shadow: 10px 10px 50px grey !important;
+    }
+    /* #slight{
+        padding: 20px 120px !important;
+    } */
+    .hamburger{
+        display: block;
+    }
+    .links{
+        display: none;
+    }
+    .imageHolder{
+        height: 210px !important;
+    }
+}
+@media(max-width: 835px){
+    .home{
+        padding: 150px 100px 150px !important;
+    }
+    /* #slight{
+        padding: 20px 100px !important;
+    } */
+    .addition{
+        /* grid-template-columns: repeat(1, 1fr) !important; */
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .blocks{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .cards{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .project-con{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .imageHolder{
+        height: 350px !important;
+    }
+}
+@media(max-width: 795px){
+    .home{
+        padding: 150px 60px 150px !important;
+    }
+    .center-pic img{
+        height: 400px !important;
+        width: 400px !important;
+    }
+    #slight{
+        padding: 20px 60px !important;
+    }
+    .about{
+        padding: 100px 60px 0px !important;
+    }
+    .services{
+        padding: 100px 60px 60px !important;
+    }
+    .projects{
+        padding: 100px 60px 60px !important;
+    }
+    .contact{
+        padding: 100px 60px 100px !important;
+    }
+}
+@media (max-width: 750px) {
+    .addition{
+        flex-direction: column;
+    }
+}
+@media(max-width: 715px){
+    .home{
+        padding: 150px 50px 150px !important;
+    }
+    .details h3{
+        font-size: 58px !important;
+    }
+    #slight{
+        padding: 20px 50px !important;
+    }
+    .about{
+        padding: 100px 50px 0px !important;
+    }
+    .services{
+        padding: 100px 50px 60px !important;
+    }
+    .projects{
+        padding: 100px 50px 60px !important;
+    }
+    .contact{
+        padding: 100px 50px 100px !important;
+    }
+}
+@media (max-width: 640px) {
+    .imageHolder{
+        height: 300px !important;
+    }
+}
+@media(max-width: 600px){
+    .home{
+        padding: 130px 50px 150px !important;
+    }
+     .details h1{
+        font-size: 28px !important;
+    }
+    .details h3{
+        font-size: 50px !important;
+        line-height: 70px !important;
+    }
+    .details p{
+        font-size: 20px !important;
+    }
+    .center-pic img{
+        height: 350px !important;
+        width: 350px !important;
+    }
+    .logo a{
+        font-size: 25px !important;
+    }
+    .imageHolder{
+        height: 280px !important;
+    }
+    .send p{
+        font-size: 15px !important;
+    }
+}
+@media(max-width: 520px){
+    .home{
+        padding: 130px 40px 150px !important;
+    }
+    .about{
+        padding: 100px 40px 0px !important;
+    }
+    .projects{
+        padding: 100px 40px 60px !important;
+    }
+    .contact{
+        padding: 100px 40px 100px !important;
+    }
+     .details h1{
+        font-size: 28px !important;
+    }
+    .details h3{
+        font-size: 40px !important;
+        line-height: 70px !important;
+    }
+    .details p{
+        font-size: 18px !important;
+    }
+    #slight{
+        padding: 20px 40px !important;
+    }
+    .buttons{
+        flex-direction: column;
+    }
+    .middle{
+        margin-top: 70px !important;
+    }
+   .buttons a{
+        text-align: center !important;
+   }
+   .header h1{
+        font-size: 40px !important;
+   }
+   .services{
+        padding: 100px 40px 60px !important;
+    }
+    .imageHolder{
+        height: 250px !important;
+    }
+    .add div{
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .imageHolder{
+        height: 220px !important;
+    }
+}
+@media(max-width: 455px){
+    .home{
+        padding: 130px 30px 130px !important;
+    }
+    #slight{
+        padding: 20px 30px !important;
+    }
+    .about{
+        padding: 100px 30px 0px !important;
+    }
+    .services{
+        padding: 100px 30px 60px !important;
+    }
+    .projects{
+        padding: 100px 30px 60px !important;
+    }
+    .contact{
+        padding: 100px 30px 100px !important;
+    }
+}
+@media(max-width: 440px){
+    .home{
+        gap: 80px !important;
+    }
+    .form-div{
+        gap: 50px !important;
+    }
+   .center-pic img{
+        height: 300px !important;
+        width: 320px !important;
+    }
+    .addition p{
+        font-size: 15px !important;
+    }
+    .block h2{
+        font-size: 25px !important;
+    }
+    .block img{
+        height: 50px !important;
+    }
+    .diff img, .card img{
+        height: 60px !important;
+        width: 60px !important;
+    }
+    .imageHolder{
+        height: 200px !important;
+    }
+}
+@media(max-width: 400px){
+    .home{
+        gap: 70px !important;
+    }
+     .details h1{
+        font-size: 27px !important;
+    }
+    .details h3{
+        font-size: 35px !important;
+        line-height: 50px !important;
+    }
+    .details p{
+        font-size: 17px !important;
+    }
+    .center-pic img{
+        height: 250px !important;
+        width: 270px !important;
+    }
+    .addition{
+        padding: 30px !important;
+    }
+    .card, .diff{
+        padding: 30px 20px !important;
+    }
+}
+@media (max-width: 390px) {
+    .addition{
+        padding: 20px !important;
+    }
+    .imageHolder{
+        height: 190px !important;
+    }
+}
+@media(max-width: 360px){
+     .details h1{
+        font-size: 25px !important;
+    }
+    .details h3{
+        font-size: 30px !important;
+        line-height: 50px !important;
+    }
+    .details p{
+        font-size: 16px !important;
+    }
+    .center-pic img{
+        height: 250px !important;
+        width: 270px !important;
+    }
+    .addition p{
+        font-size: 13px !important;
+    }
+    .header h1{
+        font-size: 35px !important;
+   }
+    .card h3{
+      font-size: 18px !important;
+   }
+   .cards p{
+    font-size: 14px !important;
+   }
+   .diff img, .card img{
+        height: 45px !important;
+        width: 45px !important;
+    }
+    .imageHolder{
+        height: 150px !important;
+    }
+    
+}
+@media (max-width: 340px) {
+    .header h1{
+        font-size: 30px !important;
+   }
+}
