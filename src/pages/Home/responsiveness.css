@@ -247,6 +247,7 @@
     }
     .send p{
         font-size: 15px !important;
+        text-align: center;
     }
 }
 @media(max-width: 520px){
