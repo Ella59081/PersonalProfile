@@ -1,5 +1,6 @@
-import nvdiaImg from '../assets/images/nvidia-pic.png'
+import nvdiaImg from '../assets/images/nvidiaImg.png'
 import resumeImg from '../assets/images/resume-pic.png'
+
 const projects = [
     {
         name: 'Nvidia Website clone',
