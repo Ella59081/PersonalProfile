@@ -1,5 +1,6 @@
 import nvdiaImg from '../assets/images/nvidiaImg.png'
-import resumeImg from '../assets/images/resume-pic.png'
+import resumeImg from '../assets/images/resumeImg.png'
+import eccomerceImg from '../assets/images/eccomerceImg.png'
 
 const projects = [
     {
