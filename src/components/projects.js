@@ -1,6 +1,10 @@
 import nvdiaImg from '../assets/images/nvidiaImg.png'
 import resumeImg from '../assets/images/resumeImg.png'
 import eccomerceImg from '../assets/images/eccomerceImg.png'
+import airbnbImg from '../assets/images/airbnbImg.png'
+import breadwaveImg from '../assets/images/breadwaveImg.png'
+import footballImg from '../assets/images/footballPic.png'
+import notionImg from '../assets/images/notionImg.png'
 
 const projects = [
     {
@@ -21,7 +25,7 @@ const projects = [
     },
     {
         name: 'Notion website clone',
-        img: "",
+        img: notionImg,
         demoLink: "https://notionclone.onrender.com ",
         githubLink: "https://github.com/Ella59081/Notion-clone",
         description: 'A static clone of Notion website homepage showcasing my knowledge of  html structure, css layouts and responsiveness.',
@@ -29,7 +33,7 @@ const projects = [
     }, 
     {
         name: 'Airbnb website clone',
-        img: "",
+        img: airbnbImg,
         demoLink: "https://airbnbclone-ofbe.onrender.com ",
         githubLink: "https://github.com/Ella59081/airBnbClone",
         description: 'A static clone of Airbnb website homepage showcasing my knowledge of  html structure, css layouts and responsiveness.',
@@ -37,7 +41,7 @@ const projects = [
     },
     {
         name: 'Breadwave website clone',
-        img: "",
+        img: breadwaveImg,
         demoLink: "https://breadwave-clone.onrender.com",
         githubLink: "https://github.com/Ella59081/Nvidia-clone",
         description: 'A static clone of Airbnb website homepage showcasing my knowledge of  html structure, css layouts and responsiveness.',
@@ -45,7 +49,7 @@ const projects = [
     },
     {
         name: 'Football Pitch',
-        img: "",
+        img: footballImg,
         demoLink: "https://footballpitch.onrender.com",
         githubLink: "https://github.com/Ella59081/FootballPitch",
         description: 'A football pitch designed with html and css.',
