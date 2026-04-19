@@ -236,7 +236,7 @@ function Home(){
                 {
                     projects.map((project, index) =>(
                         <div data-aos="fade-up" className='projectDiv' key={index}>
-                            <div style={{backgroundImage: `url(${project.img})`}} className="imageHolder"></div>
+                            <a target='_blank' rel="noopener noreferrer" style={{backgroundImage: `url(${project.img})`}} className="imageHolder"></a>
                             <h3 className='projectName' >{project.name}</h3>
                             <p className='projectDesc'>{project.description}</p>
                             <div className="languages">
