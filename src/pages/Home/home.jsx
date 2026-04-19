@@ -23,7 +23,7 @@ import { Link } from 'lucide-react';
 import { BsInstagram } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsYoutube } from 'react-icons/bs';
-import resume from '../../assets/docs/Resume.pdf'
+import resume from '../../assets/docs/Eleanor Ebere - Front-End Developer.pdf'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
