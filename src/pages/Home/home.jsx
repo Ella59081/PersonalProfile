@@ -106,9 +106,9 @@ function Home(){
                 <ChevronUp size={28}/>
             </button>
             }
-            <div class='center-pic'>
+            {/* <div class='center-pic'>
                 <img src={introPic} alt="" />
-            </div>
+            </div> */}
             <div id="slide" class="details">
                 <div className='greet'>
                     <h1>Hello!</h1>
@@ -116,7 +116,7 @@ function Home(){
                 </div>
                 <h3 className='name'>I'm Eleanor Ebere</h3>
                 <p className='des'>A Front-End Developer with a passion for technology and design.
-                    Eager to learn, grow and collaborate.
+                    {/* Eager to learn, grow and collaborate. */}
                     
                 </p>
                 <div class="buttons">
@@ -133,9 +133,9 @@ function Home(){
             </div>
             <div class="info-block">
                     <div data-aos="fade-up" class="info">
-                        <p> Hi, My name is Eleanor Ebere, I'm a Front-End Developer currently schooling in Aptech-ph, Rivers State, Nigeria,
+                        <p> Hi, My name is Eleanor Ebere, I'm a Front-End Developer in Rivers State, Nigeria,
                             building dynamic, responsive, user-friendly interfaces and websites using frontend technologies
-                            such as HTML, CSS , JavaScript and React and effiently consuming Restful APIS.
+                            such as HTML, CSS , JavaScript and React and efficiently consuming Restful APIS.
                             I am eager to expand my skills and grow as a developer.
                             I also have wide knowledge of database management and data manipulation.
                             In my free time I enjoy playing problem solving games and listening 
@@ -178,7 +178,7 @@ function Home(){
             </div>
             <div data-aos="fade-up" class="buttons middle">
                 <a href="#Contact">Contact me</a>
-                <a href={resume} target='blank' className="second">Download My CV</a>
+                <a href={resume} target='blank'  className="second">Download My CV</a>
                 </div> 
             <div className="skills">
                 <div data-aos="fade-up" class="header">
