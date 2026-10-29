@@ -116,7 +116,6 @@ function Home(){
                 </div>
                 <h3 className='name'>I'm Eleanor Ebere</h3>
                 <p className='des'>A Front-End Developer with a passion for technology and design.
-                    {/* Eager to learn, grow and collaborate. */}
                     
                 </p>
                 <div class="buttons">

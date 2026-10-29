@@ -83,7 +83,6 @@ html{
     padding-top: 10px;
     font-size: 22px;
     animation: bounce 5s ease 0.5s 1;
-    /* width: 80%; */
 }
 .buttons{
     display: flex;
